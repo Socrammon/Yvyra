@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Yvyra é um aplicativo que utiliza inteligência artificial para auxiliar estudantes e desenvolvedores na criação de diagramas de sistemas com Arduino. O usuário descreve o que precisa, e o chatbot gera automaticamente o diagrama do circuito, simplificando o processo de prototipagem e aprendizado.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "arduino",
+    "circuito",
+    "wokwi",
+    "iot",
+    "educação",
+    "aprendizado",
+    "inteligência artificial",
+    "chatbot"
+  ],
+  "author": "Marcos Costa",
+  "contributors": [
+    {
+      "name": "Luan Queiroz"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "openai": "^5.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
