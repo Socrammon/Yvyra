@@ -1,0 +1,252 @@
+/*fundo*/
+
+body {
+    background-color: #22ae99;
+}
+
+/*degrade*/
+
+.topo {
+position: absolute; 
+top: 0;
+left: 0;
+width: 100%;        
+height: 100vh;      
+background: linear-gradient(
+    to bottom, 
+    #580070 0%,                 
+    rgba(128, 0, 128, 0.8) 3%,
+    rgba(128, 0, 128, 0) 44%
+);
+  z-index: -1;
+}
+
+/*logo*/
+
+.centro {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;      
+}
+
+.conteudo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px; 
+}
+
+/*texto embaixo da logo*/
+
+.data-projeto {
+  display: flex;
+  justify-content: center;  
+  gap: 10px;                
+  color: #580070;          
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: 'roboto';
+}
+
+.projeto {
+  color: white;             
+  font-weight: bold;
+}  
+
+.conheca1 {
+    color: #580070;
+    font-size: 50px;
+    font-family: 'Amatic SC', cursive; 
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.conheca2 {
+    color: #ffffff;
+}   
+
+/*botao*/
+
+.botao {
+  display: inline-block; 
+  background-color: #580070;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Roboto';
+}
+
+.botao:hover {
+  background-color: #f3c027;
+  transform: scale(1.1);
+}
+
+/*logo da etec*/
+
+.logo-etec {
+  position: fixed;   
+  top: 35px;         
+  left: 40px;        
+  color: #ffcc00;    
+  font-weight: bold;
+  font-size: 40px;
+  font-family: 'Amatic SC', cursive;
+  z-index: 1000;     
+}
+
+/*fontes usadas*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fontes/roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('fontes/amatic-sc/AmaticSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*pergunta.html*/
+
+.container {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+/*caixa de texto*/
+
+.input-container {
+    background-color: #49016d;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    max-width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.input-container textarea {
+    padding: 1px 11px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    color: white;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 25px;
+    resize: none; /* remove o redimensionamento manual */
+    overflow-y: auto; /* adiciona scroll quando passar do limite */
+    line-height: 1.5em; /* importante pra calcular linhas */
+    max-height: calc(1.5em * 4); /* altura de 4 linhas */
+}
+
+.input-container textarea::placeholder {
+    color: #f0f0f0;
+}
+
+/*botoes*/
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action {
+    background-color: #197e72;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action:hover {
+    transform: scale(1.1);
+}
+
+/* Botão de enviar dentro da caixa de texto */
+.send-button {
+    background-color: #e9eef4; /* cinza claro */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    flex-shrink: 0; /* não deixa encolher */
+}
+
+.send-button:hover {
+    background-color: #d7dee6;
+    transform: scale(1.1);
+}
+
+.arrow-up {
+    color: #580070; /* roxo escuro */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Adiciona estilo para as mensagens do usuário e IA */
+.message {
+  max-width: 70%;  /* Limita o tamanho das mensagens */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  word-wrap: break-word; /* Quebra a linha se necessário */
+  display: inline-block; /* Faz com que as mensagens sejam "em linha" */
+}
+
+.user {
+  background-color: #e7edf3;  /* Cor de fundo da mensagem do usuário */
+  color: #22ae99;             /* Cor do texto do usuário */
+  align-self: flex-end;    /* Alinha a mensagem à direita */
+}
+
+.ai {
+  background-color: #580070; /* Cor de fundo da mensagem da IA */
+  color: #ffffff;              /* Cor do texto da IA */
+  align-self: flex-start;   /* Alinha a mensagem à esquerda */
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Alinha todas as mensagens à esquerda inicialmente */
+  max-width: 600px;         /* Define uma largura máxima para o chat */
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: auto;         /* Permite rolagem se necessário */
+  padding: 10px;
+}
+

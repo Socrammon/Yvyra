@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Yvyra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Amatic SC', cursive;
+        background-color: #18b6a4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    </style>
+
+  <div class="container" id="tituloChat">
+    <h1 class="titulo">No que você está pensando?</h1>
+
+        <div class="chat-messages" id="chatMessages">
+        <!-- As mensagens vão aparecer aqui -->
+        </div>
+
+    <div class="input-container">
+        <!-- Mudamos para uma área de texto (textarea) -->
+        <textarea placeholder="Digite sua ideia de circuito!" id="inputText" rows="1"></textarea>
+        <button class="send-button">
+             <span class="arrow-up">↑</span>
+        </button>
+    </div>
+
+    <div class="buttons">
+      <button class="action">Imagem</button>
+      <button class="action">Código</button>
+      <button class="action">Simulação</button>
+    </div>
+  </div>
+
+  <script>
+        const textarea = document.getElementById('inputText');
+    const sendButton = document.querySelector('.send-button');
+    const chatMessages = document.getElementById('chatMessages');
+    const titulo = document.getElementById('tituloChat');
+
+    // Ajusta altura da textarea dinamicamente
+    textarea.addEventListener('input', function () {
+      this.style.height = 'auto';
+      const scrollHeight = this.scrollHeight;
+      const maxHeight = parseFloat(getComputedStyle(this).lineHeight) * 4;
+
+      if (scrollHeight <= maxHeight) {
+        this.style.height = scrollHeight + 'px';
+      } else {
+        this.style.height = maxHeight + 'px';
+        this.style.overflowY = 'scroll';
+      }
+    });
+
+    // Envia mensagem
+    sendButton.addEventListener('click', () => {
+      const message = textarea.value.trim();
+      if (message === '') return;
+
+      // Oculta o título quando a primeira mensagem for enviada
+      titulo.querySelector('.titulo').style.display = 'none';
+
+      addMessage(message, 'user');
+      textarea.value = '';
+      textarea.style.height = 'auto';
+
+      // Simula resposta da IA
+      setTimeout(() => {
+        addMessage('Essa é uma resposta simulada da IA.', 'ai');
+      }, 1000);
+    });
+
+    function addMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.classList.add('message', sender);
+      msg.textContent = text;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  </script>
+</body>
+</html>
