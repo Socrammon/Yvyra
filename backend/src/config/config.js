@@ -9,3 +9,4 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 export const GROQ_API_TOKEN = process.env.GROQ_API_TOKEN;
+export const OPENAI_API_TOKEN = process.env.OPENAI_API_TOKEN;

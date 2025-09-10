@@ -7,7 +7,7 @@ import cors from 'cors';
 
 //Funções
 //import { responderPerguntaSimples } from './services/PerguntaSimples.js';
-import perguntaSimples from './routes/perguntaSimples.js';
+import { perguntar } from './routes/perguntar.js';
 
 //Rotas
 //import { rotasFavoritos } from './routes/produtos.js'
@@ -20,14 +20,7 @@ const app = express(); //Cria o app express
 //Habilitando utilidades do app 
 app.use(cors());
 app.use(bodyParser.json());
-
-//Verificação pergunta simples ou técnica
-//if () {
-    app.use('/perguntar', perguntaSimples);
-//} else {
-
-//}
-
+app.use('/perguntar', perguntar);
 
 //app.use(rotaFavoritos);
 
