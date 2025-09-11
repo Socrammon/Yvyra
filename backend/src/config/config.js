@@ -13,3 +13,4 @@ dotenv.config({ path: path.join(__dirname, '..', 'uploads') });
 
 export const GROQ_API_TOKEN = process.env.GROQ_API_TOKEN;
 export const OPENAI_API_TOKEN = process.env.OPENAI_API_TOKEN;
+export const SUPABASE_API_TOKEN = process.env.SUPABASE_API_TOKEN;
