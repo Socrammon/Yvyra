@@ -1,6 +1,6 @@
 /*fundo*/
 
-body {
+.fundo {
     background-color: #22ae99;
 }
 
@@ -109,7 +109,7 @@ background: linear-gradient(
 
 @font-face {
   font-family: 'Roboto';
-  src: url('fontes/roboto/Roboto-Bold.ttf') format('truetype');
+  src: url('fontes/roboto/Roboto-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -121,6 +121,12 @@ background: linear-gradient(
   font-style: normal;
 }
 
+.fonte {
+  font-family: 'Amatic SC';
+  color: #e9eef4;
+  font-size: 55px;
+}
+
 /*pergunta.html*/
 
 .container {
@@ -128,9 +134,10 @@ background: linear-gradient(
 }
 
 .titulo {
-  font-size: 48px;
+  font-size: 55px;
   color: white;
   margin-bottom: 40px;
+  font-family: 'Amatic SC';
 }
 
 /*caixa de texto*/
@@ -144,13 +151,14 @@ background: linear-gradient(
     width: 600px;
     max-width: 90%;
     margin: 0 auto 20px auto;
+    font-family: "Roboto";
 }
 
 .input-container textarea {
     padding: 1px 11px;
     border: none;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 20px;
     outline: none;
     color: white;
     background: transparent;
@@ -181,7 +189,7 @@ background: linear-gradient(
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -248,5 +256,32 @@ background: linear-gradient(
   margin: 0 auto;
   overflow-y: auto;         /* Permite rolagem se necessário */
   padding: 10px;
+}
+
+/*sobre*/
+
+.sobre-container {
+    padding: 40px; /* Espaçamento interno */
+    width: 100%; /* Ajusta a largura da caixa */
+    margin: 10px auto; /* Centraliza a caixa na página */
+    text-align: center; /* Centraliza o texto dentro da seção */
+}
+
+.sobre-container h1 {
+    text-align: center; /* Alinha o título no centro */
+    font-family: 'Amatic SC'; 
+    color: white; /* Cor do título */
+    font-size: 60px; /* Tamanho da fonte do título */
+    margin-bottom: 60px; /* Espaço abaixo do título */
+}
+
+.sobre-container p {
+    font-family: 'Roboto'; 
+    color: white; 
+    font-size: 27px; 
+    line-height: 1.5; 
+    margin-bottom: 10px; 
+    color: #580070;
+    font-weight: 3000;
 }
 

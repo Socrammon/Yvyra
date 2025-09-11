@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Yvyra</title>
 </head>
+
 <body>
-    <div class="topo"></div>  <!--Degrade-->
-    <div class="centro">
-        <div class="logo-etec">ETEC Taubaté</div>
-        <div class="conteudo">
-            <img src="img/Yvyra logo.png" alt="Logo Yvyra">
-            <div class="data-projeto">
-                <span class="data">03 de Setembro de 2025</span>
-                <span class="projeto">Projeto</span>
+    <style>
+        body {
+            background-color: #22ae99;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <!-- Degradê -->
+                <div class="topo"></div>
+
+                <div class="centro">
+                    <!-- Logo ETEC -->
+                    <div class="logo-etec">ETEC Taubaté</div>
+
+                    <div class="conteudo">
+                        <!-- Logo Yvyra -->
+                        <img src="img/Yvyra logo.png" alt="Logo Yvyra">
+
+                        <!-- Data do projeto -->
+                        <div class="data-projeto">
+                            <span class="data">03 de Setembro de 2025</span>
+                            <span class="projeto">Projeto</span>
+                        </div>
+
+                        <!-- Texto Conheça o Yvyra -->
+                        <div class="conheca1">
+                            <span>CONHEÇA O</span>
+                            <span class="conheca2">YVYRA</span>
+                        </div>
+
+                        <!-- Botão Experimente -->
+                        <a href="pergunta.html" class="botao">EXPERIMENTE</a>
+                    </div>
+                </div>
+
+                <!-- Seção SOBRE -->
+                <div class="sobre-container">
+                    <h1>SOBRE</h1>
+                    <p>O Vyvra é um sistema educativo interativo que transforma descrições em linguagem natural em circuitos visuais de Arduino, ajudando estudantes a aprender de forma prática e intuitiva.</p>
+                    <p>Muitos iniciantes em eletrônica e programação têm dificuldade em entender como conectar corretamente os componentes. Diagramas manuais são confusos e pouco acessíveis.</p>
+                    <p>Nosso sistema usa Inteligência Artificial para interpretar descrições simples em texto e transformá-las automaticamente em circuitos simuláveis, exibidos no Wokwi. Assim, o aprendizado fica mais visual, rápido e acessível.</p>
+                </div>
+
             </div>
-            <div class="conheca1">
-                <span>CONHEÇA O</span>
-                <span class="conheca2">YVYRA</span>
-            </div>
-        <a href="pergunta.html" class="botao">EXPERIMENTE</a>
         </div>
     </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
