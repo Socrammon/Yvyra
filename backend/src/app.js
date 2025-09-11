@@ -2,47 +2,32 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import dotenv from 'dotenv';
-import mysql from 'mysql2';
+//import dotenv from 'dotenv';
+//import mysql from 'mysql2';
 
 //Funções
-import { responderPerguntaSimples } from './services/PerguntaSimples.js';
+//import { responderPerguntaSimples } from './services/PerguntaSimples.js';
+import perguntar from './routes/perguntar.js';
 
 //Rotas
-import { rotasFavoritos } from './routes/produtos.js'
+//import { rotasFavoritos } from './routes/produtos.js'
 
 //Mapeamento de objetos
-import { sequelize } from './models/favoritos.js';
-
-dotenv.config();
+//import { sequelize } from './models/favoritos.js';
 
 const app = express(); //Cria o app express
 
 //Habilitando utilidades do app 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(rotasFavoritos);
+app.use('/uploads', express.static('uploads'));
+app.use('/perguntar', perguntar);
+
+//app.use(rotaFavoritos);
 
 //Rota para testar se o server ta subindo
 app.get("/", (req, res) => {
     res.send("Servidor rodando!");
-});
-
-app.post('/perguntar', async (req, res) => {
-    const { pergunta } = req.body;
-
-    if (!pergunta) {
-        return res.status(400).json({ error: "Campo 'pergunta' é obrigatório." });
-    }
-
-    const respostaIA = await responderPerguntaSimples(pergunta);
-
-    if (Array.isArray(respostaIA) && respostaIA.length > 0 && respostaIA[0].generated_text) {
-        res.json({ resposta: respostaIA[0].generated_text });
-        console.log(respostaIA);
-    } else {
-        res.status(500).json({ error: "Resposta inesperada da IA." });
-    }
 });
 
 function inicializaApp() {
