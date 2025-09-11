@@ -6,6 +6,8 @@ import { converterRespostaIA } from '../services/jsonConverter.js';
 
 import { salvarJson } from '../services/jsonSalvar.js';
 
+import { uploadJson } from '../services/uploadSupabase.js';
+
 import { detectarTipoPergunta } from '../utils/detectorTipoPergunta.js';
 
 const perguntar = express.Router();
@@ -27,20 +29,26 @@ perguntar.post('/', async (req, res) => {
 
         let resposta;
 
-        if (tipo === 'tecnica') {
+        //if (tipo === 'tecnica') {
 
             resposta = await chamarGPT(pergunta);
+            const respostaJSONstring = JSON.stringify(resposta, null, 2);
+
             console.log("\nPergunta Técnica");
 
-            salvarJson(JSON.stringify(resposta, null, 2));
+            const url = await uploadJson('circuito.json', respostaJSONstring);
 
-        } else {
+            salvarJson(respostaJSONstring);
 
-            const respostaIA = await chamarGroq(pergunta);
-            resposta = converterRespostaIA(respostaIA);
-            console.log("\nPergunta Simples");
+            console.log("\nArquivo JSON disponível em:", url);
 
-        }
+        //} else {
+
+            //const respostaIA = await chamarGroq(pergunta);
+            //resposta = converterRespostaIA(respostaIA);
+            //console.log("\nPergunta Simples");
+
+        //}
 
         res.json({ resposta });
 

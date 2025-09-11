@@ -16,9 +16,9 @@ export const salvarJson = (conteudoJson, nomeArquivo = 'circuito.json') => {
 
   fs.writeFile(caminho, conteudoJson, (err) => {
     if (err) {
-      console.error('Erro ao salvar JSON:', err);
+      console.error('\nErro ao salvar JSON:', err);
     } else {
-      console.log('JSON salvo com sucesso em:', caminho);
+      console.log('\nJSON salvo com sucesso em:', caminho);
     }
   });
 };
