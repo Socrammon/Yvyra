@@ -4,6 +4,8 @@ import { chamarGroq, chamarGPT } from '../services/iaService.js';
 
 import { converterRespostaIA } from '../services/jsonConverter.js';
 
+import { salvarJson } from '../services/jsonSalvar.js';
+
 import { detectarTipoPergunta } from '../utils/detectorTipoPergunta.js';
 
 const perguntar = express.Router();
@@ -29,6 +31,8 @@ perguntar.post('/', async (req, res) => {
 
             resposta = await chamarGPT(pergunta);
             console.log("\nPergunta Técnica");
+
+            salvarJson(JSON.stringify(resposta, null, 2));
 
         } else {
 
