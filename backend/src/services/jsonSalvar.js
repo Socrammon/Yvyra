@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const salvarJson = (conteudoJson, nomeArquivo = 'circuito.json') => {
-  const pastaUploads = path.join(__dirname, '..', 'uploads');
+  const pastaUploads = path.join(__dirname, '..', '../uploads');
 
   if (!fs.existsSync(pastaUploads)) {
     fs.mkdirSync(pastaUploads, { recursive: true });
