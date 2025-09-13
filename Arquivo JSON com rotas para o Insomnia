@@ -1,0 +1,854 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.6.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/favoritos/simulacao",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"titulo\": \"Como montar um sistema\",\n\t\"texto\": \"      $ 1 0.000005 10.20027730826997 50 5 43 5e-11\\n      r 176 80 384 80 0 10\\n      s 384 80 448 80 0 1 false\\n      w 176 80 176 352 0\\n      c 384 352 176 352 4 0.000015 -9.86 -10 0\\n      l 384 80 384 352 0 1 0.03 0\\n      v 448 352 448 80 0 0 40 5 0 0 0.5\\n      r 384 352 448 352 0 100\\n      o 4 64 0 4099 20 0.05 0 2 4 3\\n      o 3 64 0 4099 20 0.05 1 2 3 3\\n      o 0 64 0 4099 0.625 0.05 2 2 0 3\\n      38 3 F1 0 0.000001 0.000101 -1 Capacitance\\n      38 4 F1 0 0.01 1.01 -1 Inductance\\n      38 0 F1 0 1 101 -1 Resistance\\n      h 1 4 3\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir Favoritos Simulação"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:3000/favoritos/simulacao/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Favoritos Simulação"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/favoritos/simulacao",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Consultar Favoritos Simulação"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/favoritos/simulacao/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Consultar por ID Favoritos Simulação"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/favoritos/simulacao",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "Cancelled",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Consultar Favoritos Imagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/favoritos/simulacao/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Consultar por ID Favoritos Imagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/favoritos/simulacao",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Consultar Favoritos Mensagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/favoritos/simulacao/2",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Consultar por ID Favoritos Mensagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/favoritos/mensagem",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"titulo\": \"Como montar um sistema\",\n\t\"texto\": \"Montar um circuito é basicamente criar um caminho para a eletricidade sair da fonte, passar pelos componentes (como resistores, LEDs e botões) e voltar para a fonte. Planeje como vai ligar tudo, conecte os componentes respeitando polaridades e valores, teste para ver se funciona, e só depois faça a versão definitiva com solda, se quiser.\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir Favoritos Mensagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:3000/favoritos/mensagem/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Favoritos Mensagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/favoritos/imagem",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"titulo\": \"Led e bateria\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Inserir Favoritos Imagem - A aplicação que da o caminho, então essa requisição manualmente não funciona!"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:3000/favoritos/imagem/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Favoritos Imagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/perguntar/simulacao",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"pergunta\": \"Faça um circuito de led ligado a bateria.\" \n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Pergunta Simulação"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/perguntar/simples",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer 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"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.4.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"pergunta\": \"Qual a capital da França?\" \n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Pergunta Simples"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 6160.427000000001,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/perguntar/imagem",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer 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"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.4.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"pergunta\": \"Faça um circuito de led ligado a bateria.\" \n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "315"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"13b-H9rp0GrQdJMXk+YXIe3APCqsrd8\""
+						},
+						{
+							"name": "Date",
+							"value": "Sat, 13 Sep 2025 07:14:52 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 315,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"resposta\":\"\\n      \\\\documentclass{standalone}\\n      \\\\usepackage{circuitikz}\\n      \\\\begin{document}\\n      \\\\begin{circuitikz}\\n        \\\\draw\\n          (0,0) to[battery] (0,2)\\n          to[resistor] (2,2)\\n          to[led] (2,0)\\n          -- (0,0);\\n      \\\\end{circuitikz}\\n      \\\\end{document}\\n    \"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 6160.427000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Pergunta Imagem"
+			},
+			{
+				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"time": 0,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/perguntar/ensinar",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer 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"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.4.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"pergunta\": \"Como funciona as conexões de um circuito?\" \n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Pergunta Ensinar"
+			}
+		]
+	}
+}
