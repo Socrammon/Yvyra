@@ -6,6 +6,9 @@ import cors from 'cors';
 //Inicializador do Banco de dados
 import { inicializarBanco } from './config/database.js';
 
+//Autenticador
+import authRoutes from "./routes/authRoutes.js";
+
 //Importação das rotas perguntar
 import perguntarSimples from './routes/perguntarSimples.js';
 import perguntarEnsinar from './routes/perguntarEnsinar.js';
@@ -23,6 +26,7 @@ const app = express(); //Cria o app express
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
+app.use("/autenticacao", authRoutes);
 
 //Rotas perguntar
 app.use('/perguntar/simples', perguntarSimples);
