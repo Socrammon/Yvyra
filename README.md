@@ -38,6 +38,7 @@ HTML, CSS e JavaScript puro
 Instalação(Via chocolatey):
 Node.js: v20.10.0 - choco install nodejs --version=20.10.0 -y
 
+Variaveis de ambiente:
 Ghostscript: v10.06.0 - choco install ghostscript --version=10.06.0 -y
 MiKTeX: v4.12.0.0 - choco install miktex --version=4.12.0.0 -y
 ImageMagick: v7.1.2.3 - choco install imagemagick --version=7.1.2.3 -y
@@ -123,4 +124,6 @@ Observações:
 A pergunta não pode ter mais que 50 palavras
 O arquivo gerado para imagem é salvo na pasta uploads
 -----------------------------------------------------------------------------------------------------------------------------------
-
+# Documentação APIs - Swagger
+Para acessar a documentação das APIs pelo swagger, deve se inicializar o servidor com npm run start ou npm run dev
+e acessar a url: "http://localhost:3000/api-docs/"

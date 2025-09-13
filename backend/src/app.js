@@ -6,8 +6,8 @@ import cors from 'cors';
 //Inicializador do Banco de dados
 import { inicializarBanco } from './config/database.js';
 
-//Autenticador
-import authRoutes from "./routes/authRoutes.js";
+//Swagger
+import { setupSwagger } from './config/swagger.js';
 
 //Importação das rotas perguntar
 import perguntarSimples from './routes/perguntarSimples.js';
@@ -26,7 +26,6 @@ const app = express(); //Cria o app express
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
-app.use("/autenticacao", authRoutes);
 
 //Rotas perguntar
 app.use('/perguntar/simples', perguntarSimples);
@@ -41,6 +40,8 @@ app.use('/favoritos', rotasFavoritosSimulacao);
 
 // Inicializa tudo
 async function InicializarServidor() {
+
+    setupSwagger(app);
 
     try {
 
