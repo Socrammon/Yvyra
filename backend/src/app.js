@@ -2,18 +2,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-//import dotenv from 'dotenv';
-//import mysql from 'mysql2';
 
-//Funções
-//import { responderPerguntaSimples } from './services/PerguntaSimples.js';
-import perguntar from './routes/perguntar.js';
-
-//Rotas
-//import { rotasFavoritos } from './routes/produtos.js'
-
-//Mapeamento de objetos
-//import { sequelize } from './models/favoritos.js';
+//Importação das rotas
+import perguntarSimples from './routes/perguntarSimples.js';
+import perguntarEnsinar from './routes/perguntarEnsinar.js';
+import perguntarImagem from './routes/perguntarImagem.js';
+import perguntarSimulacao from './routes/perguntarSimulacao.js';
 
 const app = express(); //Cria o app express
 
@@ -21,14 +15,12 @@ const app = express(); //Cria o app express
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
-app.use('/perguntar', perguntar);
 
-//app.use(rotaFavoritos);
-
-//Rota para testar se o server ta subindo
-app.get("/", (req, res) => {
-    res.send("Servidor rodando!");
-});
+//Rotas
+app.use('/perguntar/simples', perguntarSimples);
+app.use('/perguntar/ensinar', perguntarEnsinar);
+app.use('/perguntar/imagem', perguntarImagem);
+app.use('/perguntar/simulacao', perguntarSimulacao);
 
 function inicializaApp() {
 
@@ -36,7 +28,7 @@ function inicializaApp() {
     const host = 'localhost';
 
     app.listen(porta, () => {
-        console.log(`\nServidor rodando em http://${host}:${porta}`);
+        console.log(`\nServidor em http://${host}:${porta}`);
     });
 }
 
