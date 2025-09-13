@@ -2,18 +2,20 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-//import dotenv from 'dotenv';
-//import mysql from 'mysql2';
 
-//Funções
-//import { responderPerguntaSimples } from './services/PerguntaSimples.js';
-import perguntar from './routes/perguntar.js';
+//Inicializador do Banco de dados
+import { inicializarBanco } from './config/database.js';
 
-//Rotas
-//import { rotasFavoritos } from './routes/produtos.js'
+//Importação das rotas perguntar
+import perguntarSimples from './routes/perguntarSimples.js';
+import perguntarEnsinar from './routes/perguntarEnsinar.js';
+import perguntarImagem from './routes/perguntarImagem.js';
+import perguntarSimulacao from './routes/perguntarSimulacao.js';
 
-//Mapeamento de objetos
-//import { sequelize } from './models/favoritos.js';
+//Importação das rotas favoritar
+import { rotasFavoritosEnsinar } from './routes/favoritarEnsinar.js';
+import { rotasFavoritosImagem } from './routes/favoritarImagem.js';
+import { rotasFavoritosSimulacao } from './routes/favoritarSimulacao.js';
 
 const app = express(); //Cria o app express
 
@@ -21,23 +23,37 @@ const app = express(); //Cria o app express
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
-app.use('/perguntar', perguntar);
 
-//app.use(rotaFavoritos);
+//Rotas perguntar
+app.use('/perguntar/simples', perguntarSimples);
+app.use('/perguntar/ensinar', perguntarEnsinar);
+app.use('/perguntar/imagem', perguntarImagem);
+app.use('/perguntar/simulacao', perguntarSimulacao);
 
-//Rota para testar se o server ta subindo
-app.get("/", (req, res) => {
-    res.send("Servidor rodando!");
-});
+//Rotas favoritar
+app.use('/favoritos', rotasFavoritosEnsinar);
+app.use('/favoritos', rotasFavoritosImagem);
+app.use('/favoritos', rotasFavoritosSimulacao);
 
-function inicializaApp() {
+// Inicializa tudo
+async function InicializarServidor() {
 
-    const porta = 3000;
-    const host = 'localhost';
+    try {
 
-    app.listen(porta, () => {
-        console.log(`\nServidor rodando em http://${host}:${porta}`);
-    });
+        await inicializarBanco();
+
+        const porta = 3000;
+        const host = 'localhost';
+
+        app.listen(porta, () => {
+            console.log(`\nServidor rodando em http://${host}:${porta}`);
+        });
+
+    } catch (erro) {
+        console.error('\nErro ao iniciar o servidor:', erro);
+        process.exit(1); // Encerra a aplicação se algo der errado
+    }
+
 }
 
-inicializaApp();
+InicializarServidor();
