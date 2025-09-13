@@ -1,90 +1,89 @@
-/*fundo*/
-
-body {
-    background-color: #22ae99;
+/* ======================== */
+/* FUNDOS E TOPO            */
+/* ======================== */
+.fundo {
+  background-color: #22ae99;
 }
 
-/*degrade*/
-
 .topo {
-position: absolute; 
-top: 0;
-left: 0;
-width: 100%;        
-height: 100vh;      
-background: linear-gradient(
-    to bottom, 
-    #580070 0%,                 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #580070 0%,
     rgba(128, 0, 128, 0.8) 3%,
     rgba(128, 0, 128, 0) 44%
-);
+  );
   z-index: -1;
 }
 
-/*logo*/
-
+/* ======================== */
+/* LOGO CENTRAL + TEXTO     */
+/* ======================== */
 .centro {
   display: flex;
-  justify-content: center; 
-  align-items: center;     
-  height: 100vh;           
-  text-align: center;      
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
 .conteudo img {
   max-width: 300px;
   width: 100%;
   height: auto;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
-
-/*texto embaixo da logo*/
 
 .data-projeto {
   display: flex;
-  justify-content: center;  
-  gap: 10px;                
-  color: #580070;          
+  justify-content: center;
+  gap: 10px;
   font-size: 20px;
   margin-bottom: 20px;
-  font-family: 'roboto';
+  font-family: 'Roboto';
+  color: #580070;
 }
 
 .projeto {
-  color: white;             
+  color: #fff;
   font-weight: bold;
-}  
+}
 
 .conheca1 {
-    color: #580070;
-    font-size: 50px;
-    font-family: 'Amatic SC', cursive; 
-    font-weight: normal;
-    margin-bottom: 20px;
-    text-align: center;
+  color: #580070;
+  font-size: 50px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .conheca2 {
-    color: #ffffff;
-}   
+  color: #fff;
+}
 
-/*botao*/
-
+/* ======================== */
+/* BOTÕES GERAIS            */
+/* ======================== */
 .botao {
-  display: inline-block; 
+  display: inline-block;
   background-color: #580070;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 20px;
   padding: 12px 30px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   font-weight: 500;
+  font-family: 'Roboto';
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
-  font-family: 'Roboto';
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .botao:hover {
@@ -92,24 +91,26 @@ background: linear-gradient(
   transform: scale(1.1);
 }
 
-/*logo da etec*/
-
+/* ======================== */
+/* LOGO FIXO SUPERIOR       */
+/* ======================== */
 .logo-etec {
-  position: fixed;   
-  top: 35px;         
-  left: 40px;        
-  color: #ffcc00;    
+  position: fixed;
+  top: 35px;
+  left: 40px;
+  color: #ffcc00;
   font-weight: bold;
   font-size: 40px;
   font-family: 'Amatic SC', cursive;
-  z-index: 1000;     
+  z-index: 1000;
 }
 
-/*fontes usadas*/
-
+/* ======================== */
+/* FONTES                   */
+/* ======================== */
 @font-face {
   font-family: 'Roboto';
-  src: url('fontes/roboto/Roboto-Bold.ttf') format('truetype');
+  src: url('fontes/roboto/Roboto-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -121,132 +122,266 @@ background: linear-gradient(
   font-style: normal;
 }
 
-/*pergunta.html*/
+.fonte {
+  font-family: 'Amatic SC';
+  font-size: 55px;
+  color: #e9eef4;
+}
 
+/* ======================== */
+/* PÁGINA PERGUNTA          */
+/* ======================== */
 .container {
   text-align: center;
 }
 
 .titulo {
-  font-size: 48px;
-  color: white;
+  font-size: 55px;
   margin-bottom: 40px;
+  font-family: 'Amatic SC';
+  color: #fff;
 }
 
-/*caixa de texto*/
-
+/* Caixa de texto */
 .input-container {
-    background-color: #49016d;
-    border-radius: 30px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    width: 600px;
-    max-width: 90%;
-    margin: 0 auto 20px auto;
+  background-color: #49016d;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  max-width: 90%;
+  margin: 0 auto 20px auto;
+  font-family: "Roboto";
 }
 
 .input-container textarea {
-    padding: 1px 11px;
-    border: none;
-    border-radius: 30px;
-    font-size: 14px;
-    outline: none;
-    color: white;
-    background: transparent;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 25px;
-    resize: none; /* remove o redimensionamento manual */
-    overflow-y: auto; /* adiciona scroll quando passar do limite */
-    line-height: 1.5em; /* importante pra calcular linhas */
-    max-height: calc(1.5em * 4); /* altura de 4 linhas */
+  padding: 1px 11px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  min-height: 25px;
+  resize: none;
+  overflow-y: auto;
+  line-height: 1.5em;
+  max-height: calc(1.5em * 4);
+  box-sizing: border-box;
 }
 
 .input-container textarea::placeholder {
-    color: #f0f0f0;
+  color: #f0f0f0;
 }
 
-/*botoes*/
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.action {
-    background-color: #197e72;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.action:hover {
-    transform: scale(1.1);
-}
-
-/* Botão de enviar dentro da caixa de texto */
+/* Botão enviar dentro da caixa */
 .send-button {
-    background-color: #e9eef4; /* cinza claro */
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    flex-shrink: 0; /* não deixa encolher */
+  background-color: #e9eef4;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .send-button:hover {
-    background-color: #d7dee6;
-    transform: scale(1.1);
+  background-color: #d7dee6;
+  transform: scale(1.1);
 }
 
 .arrow-up {
-    color: #580070; /* roxo escuro */
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
+  color: #580070;
 }
 
-/* Adiciona estilo para as mensagens do usuário e IA */
-.message {
-  max-width: 70%;  /* Limita o tamanho das mensagens */
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  font-size: 16px;
-  word-wrap: break-word; /* Quebra a linha se necessário */
-  display: inline-block; /* Faz com que as mensagens sejam "em linha" */
+/* Botões múltiplos */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.user {
-  background-color: #e7edf3;  /* Cor de fundo da mensagem do usuário */
-  color: #22ae99;             /* Cor do texto do usuário */
-  align-self: flex-end;    /* Alinha a mensagem à direita */
+.action {
+  background-color: #197e72;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.ai {
-  background-color: #580070; /* Cor de fundo da mensagem da IA */
-  color: #ffffff;              /* Cor do texto da IA */
-  align-self: flex-start;   /* Alinha a mensagem à esquerda */
+.action:hover {
+  transform: scale(1.1);
 }
 
+/* ======================== */
+/* CHAT MENSAGENS           */
+/* ======================== */
 .chat-messages {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  /* Alinha todas as mensagens à esquerda inicialmente */
-  max-width: 600px;         /* Define uma largura máxima para o chat */
+  align-items: flex-start;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  overflow-y: auto;         /* Permite rolagem se necessário */
   padding: 10px;
+  overflow-y: auto;
 }
 
+.message {
+  max-width: 70%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.user {
+  background-color: #e7edf3;
+  color: #22ae99;
+  align-self: flex-end;
+}
+
+.ai {
+  background-color: #580070;
+  color: #fff;
+  align-self: flex-start;
+}
+
+/* ======================== */
+/* SOBRE PÁGINA             */
+/* ======================== */
+.sobre-container {
+  width: 100%;
+  margin: 10px auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.sobre-container h1 {
+  font-size: 60px;
+  margin-bottom: 60px;
+  font-family: 'Amatic SC';
+  color: #fff;
+}
+
+.sobre-container p {
+  font-size: 27px;
+  line-height: 1.5;
+  font-family: 'Roboto';
+  font-weight: 3000;
+  color: #580070;
+  margin-bottom: 10px;
+}
+
+/* ======================== */
+/* LOGIN FORM               */
+/* ======================== */
+.quadrado {
+  width: 400px;
+  height: 300px;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #580070;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+  font-family: 'Roboto';
+  color: #e7edf3;
+}
+
+.quadrado h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* botões dentro do login */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.botao1 {
+  display: inline-block;
+  background-color: #9505bd;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 26px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Roboto';
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao1:hover {
+  background-color: #f3c027;
+  transform: scale(1.1);
+}
+
+/* inputs do login */
+.forma {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.forma input {
+  flex: 2;
+  padding: 3px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.forma input:focus {
+  outline: none;
+  border-color: #22ae99;
+  box-shadow: 0, 0, 8px #22ae99;
+}
+
+.login-link {
+      position: fixed;
+      top: 40px;
+      right: 30px;
+      background: #f3c027;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #580070;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+
+    .login-link:hover {
+      background: #fff;
+      color: #580070;
+    }
