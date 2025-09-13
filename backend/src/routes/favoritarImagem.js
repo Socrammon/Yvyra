@@ -3,6 +3,33 @@ import { registrarFavoritoImagem, consultarFavoritosImagem, consultarFavoritosIm
 
 export const rotasFavoritosImagem = express.Router();
 
+/**
+ * @swagger
+ * /favoritos/imagem:
+ *   post:
+ *     summary: Adiciona uma imagem aos favoritos
+ *     tags: [Favoritos - Imagem]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - titulo
+ *             properties:
+ *               titulo:
+ *                 type: string
+ *                 example: "Minha Imagem Favorita"
+ *     responses:
+ *       201:
+ *         description: Imagem favoritada com sucesso
+ *       400:
+ *         description: Título é obrigatório
+ *       500:
+ *         description: Erro interno
+ */
+
 rotasFavoritosImagem.post('/imagem', async (req, res) => {
 
     const favoritoImagem = req.body; // Converte para objeto JSON
@@ -41,6 +68,26 @@ rotasFavoritosImagem.post('/imagem', async (req, res) => {
 
 });
 
+/**
+ * @swagger
+ * /favoritos/imagem/{id}:
+ *   delete:
+ *     summary: Remove imagem dos favoritos por ID
+ *     tags: [Favoritos - Imagem]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID da imagem
+ *     responses:
+ *       204:
+ *         description: Imagem removida com sucesso
+ *       500:
+ *         description: Erro interno
+ */
+
 rotasFavoritosImagem.delete('/imagem/:id', async (req, res) => {
 
     const id = req.params.id;
@@ -65,6 +112,28 @@ rotasFavoritosImagem.delete('/imagem/:id', async (req, res) => {
     }
 
 });
+
+/**
+ * @swagger
+ * /favoritos/imagem/{id}:
+ *   get:
+ *     summary: Consulta imagem favoritada por ID
+ *     tags: [Favoritos - Imagem]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID da imagem
+ *     responses:
+ *       200:
+ *         description: Imagem encontrada
+ *       404:
+ *         description: Imagem não encontrada
+ *       500:
+ *         description: Erro interno
+ */
 
 rotasFavoritosImagem.get('/imagem/:id', async (req, res) => {
 
@@ -100,6 +169,19 @@ rotasFavoritosImagem.get('/imagem/:id', async (req, res) => {
         return;
     }
 });
+
+/**
+ * @swagger
+ * /favoritos/imagem:
+ *   get:
+ *     summary: Lista todas as imagens favoritadas
+ *     tags: [Favoritos - Imagem]
+ *     responses:
+ *       200:
+ *         description: Lista retornada com sucesso
+ *       500:
+ *         description: Erro interno
+ */
 
 rotasFavoritosImagem.get('/imagem', async (req, res) => {
 
