@@ -25,6 +25,9 @@ node-fetch: v3.3.2
 openai: v5.20.1  
 sequelize: v6.37.7  
 nodemon: v3.1.10  
+jsonwebtoken v9.0.2
+bcrypt v6.0.0
+
 
 API externa: Groq
 
@@ -52,6 +55,52 @@ start: "node src/app.js"
 dev: "nodemon src/app.js"
 -------------------------------------------------------------------------------------------------------------------
 # Documentação das rotas:
+
+Rotas(autentificação):
+
+Parâmetro para a requisições: autentificação
+
+http://localhost:3000/api/register - POST
+{
+  "nome": "Luan",
+  "email": "luan@teste.com",
+  "senha": "123456"
+}
+
+Resposta esperada :
+
+{ "msg": "Usuário cadastrado!" }
+
+http://localhost:3000/api/login - POST
+
+{
+  "email": "luan@teste.com",
+  "senha": "123456"
+}
+
+Resposta esperada:
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+
+http://localhost:3000/api/perfil - GET
+Key: Authorization
+Value: Bearer SEU_TOKEN_AQUI
+
+Código para baixar as bibliotecas: npm install express jsonwebtoken bcrypt body-parser dotenv
+
+Reposta esperada:
+
+{
+  "msg": "Acesso autorizado",
+  "user": {
+    "nome": "teste",
+    "email": "teste@teste.com",
+    "iat": 16900...,
+    "exp": 16900...
+  }
+}
 
 Rotas(perguntar):
 
