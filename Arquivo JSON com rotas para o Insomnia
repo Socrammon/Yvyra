@@ -7,8 +7,270 @@
 		},
 		"entries": [
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 0,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 2.846,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/api/register",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome\": \"Marcos\",\n\t\"email\": \"marcos@teste.com\",\n\t\"senha\": \"12345\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 400,
+					"statusText": "Bad Request",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "33"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"21-SUji3GtCvoTQjklHnjDGjrDrjZI\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 00:03:13 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 33,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"error\":\"E-mail já cadastrado\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.846,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Autenticação Register"
+			},
+			{
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 58.666999999999994,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:3000/api/login",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"email\": \"marcos@teste.com\",\n\t\"senha\": \"12345\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "176"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"b0-nN873tcMQfmfrCXiuWzdHEa2nhs\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 00:17:59 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 176,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmNvc0B0ZXN0ZS5jb20iLCJpYXQiOjE3NTc4MDkwNzksImV4cCI6MTc1NzgxMjY3OX0.js6zczu5RpkXEhdzQyGK-k1y8-TWJyrkrM4Da_KhSiM\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 58.666999999999994,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Autenticação login"
+			},
+			{
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 2.114,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:3000/api/perfil",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmNvc0B0ZXN0ZS5jb20iLCJpYXQiOjE3NTc4MDkwNzksImV4cCI6MTc1NzgxMjY3OX0.js6zczu5RpkXEhdzQyGK-k1y8-TWJyrkrM4Da_KhSiM"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 401,
+					"statusText": "Unauthorized",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "39"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"27-FwBkW9YKwguewb0o8Te74FSQZ6A\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 00:18:13 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"content": {
+						"size": 39,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"error\":\"Token inválido ou expirado\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.114,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Autenticação Rota protegida"
+			},
+			{
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 97.271,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/favoritos/simulacao",
@@ -27,20 +289,54 @@
 					"queryString": [],
 					"postData": {
 						"mimeType": "application/json",
-						"text": "{\n  \"titulo\": \"Como montar um sistema\",\n\t\"texto\": \"      $ 1 0.000005 10.20027730826997 50 5 43 5e-11\\n      r 176 80 384 80 0 10\\n      s 384 80 448 80 0 1 false\\n      w 176 80 176 352 0\\n      c 384 352 176 352 4 0.000015 -9.86 -10 0\\n      l 384 80 384 352 0 1 0.03 0\\n      v 448 352 448 80 0 0 40 5 0 0 0.5\\n      r 384 352 448 352 0 100\\n      o 4 64 0 4099 20 0.05 0 2 4 3\\n      o 3 64 0 4099 20 0.05 1 2 3 3\\n      o 0 64 0 4099 0.625 0.05 2 2 0 3\\n      38 3 F1 0 0.000001 0.000101 -1 Capacitance\\n      38 4 F1 0 0.01 1.01 -1 Inductance\\n      38 0 F1 0 1 101 -1 Resistance\\n      h 1 4 3\"\n}\n"
+						"text": "{\n  \"titulo\": \"Como montar um sistema\",\n\t\"codigo\": \"      $ 1 0.000005 10.20027730826997 50 5 43 5e-11\\n      r 176 80 384 80 0 10\\n      s 384 80 448 80 0 1 false\\n      w 176 80 176 352 0\\n      c 384 352 176 352 4 0.000015 -9.86 -10 0\\n      l 384 80 384 352 0 1 0.03 0\\n      v 448 352 448 80 0 0 40 5 0 0 0.5\\n      r 384 352 448 352 0 100\\n      o 4 64 0 4099 20 0.05 0 2 4 3\\n      o 3 64 0 4099 20 0.05 1 2 3 3\\n      o 0 64 0 4099 0.625 0.05 2 2 0 3\\n      38 3 F1 0 0.000001 0.000101 -1 Capacitance\\n      38 4 F1 0 0.01 1.01 -1 Inductance\\n      38 0 F1 0 1 101 -1 Resistance\\n      h 1 4 3\"\n}\n"
 					},
 					"headersSize": -1,
 					"bodySize": -1
 				},
 				"response": {
-					"status": 0,
-					"statusText": "",
+					"status": 201,
+					"statusText": "Created",
 					"httpVersion": "HTTP/1.1",
 					"cookies": [],
-					"headers": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "667"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"29b-oy93gxLcYLs3HnwqxGDQzHiJ3ns\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 01:26:50 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
 					"content": {
-						"size": 0,
-						"mimeType": ""
+						"size": 667,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"mensagem\":\"Simulação Como montar um sistema favoritada com sucesso\",\"titulo\":\"Como montar um sistema\",\"codigo\":\"      $ 1 0.000005 10.20027730826997 50 5 43 5e-11\\n      r 176 80 384 80 0 10\\n      s 384 80 448 80 0 1 false\\n      w 176 80 176 352 0\\n      c 384 352 176 352 4 0.000015 -9.86 -10 0\\n      l 384 80 384 352 0 1 0.03 0\\n      v 448 352 448 80 0 0 40 5 0 0 0.5\\n      r 384 352 448 352 0 100\\n      o 4 64 0 4099 20 0.05 0 2 4 3\\n      o 3 64 0 4099 20 0.05 1 2 3 3\\n      o 0 64 0 4099 0.625 0.05 2 2 0 3\\n      38 3 F1 0 0.000001 0.000101 -1 Capacitance\\n      38 4 F1 0 0.01 1.01 -1 Inductance\\n      38 0 F1 0 1 101 -1 Resistance\\n      h 1 4 3\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -52,14 +348,14 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 0,
+					"wait": 97.271,
 					"receive": 0,
 					"ssl": -1
 				},
 				"comment": "Inserir Favoritos Simulação"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "DELETE",
@@ -107,7 +403,7 @@
 				"comment": "Deletar Favoritos Simulação"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "GET",
@@ -155,7 +451,7 @@
 				"comment": "Consultar Favoritos Simulação"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "GET",
@@ -203,7 +499,7 @@
 				"comment": "Consultar por ID Favoritos Simulação"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "GET",
@@ -252,7 +548,7 @@
 				"comment": "Consultar Favoritos Imagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "GET",
@@ -300,7 +596,7 @@
 				"comment": "Consultar por ID Favoritos Imagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "GET",
@@ -348,7 +644,7 @@
 				"comment": "Consultar Favoritos Mensagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "GET",
@@ -396,8 +692,8 @@
 				"comment": "Consultar por ID Favoritos Mensagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 0,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 94.36500000000001,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/favoritos/mensagem",
@@ -422,14 +718,48 @@
 					"bodySize": -1
 				},
 				"response": {
-					"status": 0,
-					"statusText": "",
+					"status": 201,
+					"statusText": "Created",
 					"httpVersion": "HTTP/1.1",
 					"cookies": [],
-					"headers": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "458"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"1ca-Wv1yddOMPzoMxQNMH8164Z61xIk\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 01:26:35 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
 					"content": {
-						"size": 0,
-						"mimeType": ""
+						"size": 458,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"mensagem\":\"Mensagem Como montar um sistema favoritada com sucesso\",\"titulo\":\"Como montar um sistema\",\"texto\":\"Montar um circuito é basicamente criar um caminho para a eletricidade sair da fonte, passar pelos componentes (como resistores, LEDs e botões) e voltar para a fonte. Planeje como vai ligar tudo, conecte os componentes respeitando polaridades e valores, teste para ver se funciona, e só depois faça a versão definitiva com solda, se quiser.\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -441,14 +771,14 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 0,
+					"wait": 94.36500000000001,
 					"receive": 0,
 					"ssl": -1
 				},
 				"comment": "Inserir Favoritos Mensagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "DELETE",
@@ -496,8 +826,8 @@
 				"comment": "Deletar Favoritos Mensagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 0,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 247.135,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/favoritos/imagem",
@@ -516,20 +846,54 @@
 					"queryString": [],
 					"postData": {
 						"mimeType": "application/json",
-						"text": "{\n  \"titulo\": \"Led e bateria\"\n}\n"
+						"text": "{\n  \"titulo\": \"Led e bateria\",\n  \"caminho\": \"E:\\\\Sla\\\\Yvyra\\\\backend\\\\uploads\"\n}"
 					},
 					"headersSize": -1,
 					"bodySize": -1
 				},
 				"response": {
-					"status": 0,
-					"statusText": "",
+					"status": 201,
+					"statusText": "Created",
 					"httpVersion": "HTTP/1.1",
 					"cookies": [],
-					"headers": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "128"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"80-jthS0t/awxt+0VR7FL3tHho56pM\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 01:26:09 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
 					"content": {
-						"size": 0,
-						"mimeType": ""
+						"size": 128,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"mensagem\":\"Imagem Led e bateria favoritada com sucesso\",\"titulo\":\"Led e bateria\",\"caminho\":\"E:\\\\Sla\\\\Yvyra\\\\backend\\\\uploads\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -541,14 +905,14 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 0,
+					"wait": 247.135,
 					"receive": 0,
 					"ssl": -1
 				},
-				"comment": "Inserir Favoritos Imagem - A aplicação que da o caminho, então essa requisição manualmente não funciona!"
+				"comment": "Inserir Favoritos Imagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
 				"time": 0,
 				"request": {
 					"method": "DELETE",
@@ -596,8 +960,8 @@
 				"comment": "Deletar Favoritos Imagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 0,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 2305.622,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/perguntar/simulacao",
@@ -622,14 +986,48 @@
 					"bodySize": -1
 				},
 				"response": {
-					"status": 0,
-					"statusText": "",
+					"status": 200,
+					"statusText": "OK",
 					"httpVersion": "HTTP/1.1",
 					"cookies": [],
-					"headers": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "213"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"d5-Db6CkvYlMTgcyGqsa9wGmW/N/3E\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 01:16:20 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
 					"content": {
-						"size": 0,
-						"mimeType": ""
+						"size": 213,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"resposta\":\"$ 1 0.000005 10.20027730826997 50 5 43 5e-11\\nr 176 80 384 80 0 1000\\nv 384 80 384 352 0 0 5 5 0 0 0.5\\nl 384 352 384 80 0 1 0.03 0\\nw 176 80 176 352 0\\no 0 64 0 4099 0.625 0.05 2 2 0 3\\nh 1 4 3\\n\\n\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -641,15 +1039,15 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 0,
+					"wait": 2305.622,
 					"receive": 0,
 					"ssl": -1
 				},
 				"comment": "Pergunta Simulação"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 0,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 4521.321999999999,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/perguntar/simples",
@@ -678,14 +1076,48 @@
 					"bodySize": -1
 				},
 				"response": {
-					"status": 0,
-					"statusText": "",
+					"status": 200,
+					"statusText": "OK",
 					"httpVersion": "HTTP/1.1",
 					"cookies": [],
-					"headers": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "45"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"2d-NNudZ1UhtWHQXJhgsT+W5iBtywU\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 00:46:22 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
 					"content": {
-						"size": 0,
-						"mimeType": ""
+						"size": 45,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"resposta\":\"A capital da França é Paris.\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -697,15 +1129,15 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 0,
+					"wait": 4521.321999999999,
 					"receive": 0,
 					"ssl": -1
 				},
 				"comment": "Pergunta Simples"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 6160.427000000001,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 5747.254,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/perguntar/imagem",
@@ -753,15 +1185,15 @@
 						},
 						{
 							"name": "Content-Length",
-							"value": "315"
+							"value": "351"
 						},
 						{
 							"name": "ETag",
-							"value": "W/\"13b-H9rp0GrQdJMXk+YXIe3APCqsrd8\""
+							"value": "W/\"15f-qyJAZqAjqb+8zkgLD4OsJWAGMS0\""
 						},
 						{
 							"name": "Date",
-							"value": "Sat, 13 Sep 2025 07:14:52 GMT"
+							"value": "Sun, 14 Sep 2025 01:17:52 GMT"
 						},
 						{
 							"name": "Connection",
@@ -773,9 +1205,9 @@
 						}
 					],
 					"content": {
-						"size": 315,
+						"size": 351,
 						"mimeType": "application/json; charset=utf-8",
-						"text": "{\"resposta\":\"\\n      \\\\documentclass{standalone}\\n      \\\\usepackage{circuitikz}\\n      \\\\begin{document}\\n      \\\\begin{circuitikz}\\n        \\\\draw\\n          (0,0) to[battery] (0,2)\\n          to[resistor] (2,2)\\n          to[led] (2,0)\\n          -- (0,0);\\n      \\\\end{circuitikz}\\n      \\\\end{document}\\n    \"}"
+						"text": "{\"resposta\":\"\\\\documentclass{standalone}\\n\\\\usepackage{circuitikz}\\n\\\\begin{document}\\n\\\\begin{circuitikz}\\n  \\\\draw\\n    (0,0) to[battery] (0,2)\\n    to[led] (2,2)\\n    -- (2,0)\\n    -- (0,0);\\n\\\\end{circuitikz}\\n\\\\end{document}\\n\\nExplicação rápida:\\n\\n(x,y) → coordenadas.\\n\\nto[battery] → bateria.\\n\\nto[led] → LED.\\n\\n-- → fio comum.\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -787,15 +1219,15 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 6160.427000000001,
+					"wait": 5747.254,
 					"receive": 0,
 					"ssl": -1
 				},
 				"comment": "Pergunta Imagem"
 			},
 			{
-				"startedDateTime": "2025-09-13T22:57:24.402Z",
-				"time": 0,
+				"startedDateTime": "2025-09-14T01:36:23.209Z",
+				"time": 14168.599,
 				"request": {
 					"method": "POST",
 					"url": "http://localhost:3000/perguntar/ensinar",
@@ -824,14 +1256,48 @@
 					"bodySize": -1
 				},
 				"response": {
-					"status": 0,
-					"statusText": "",
+					"status": 200,
+					"statusText": "OK",
 					"httpVersion": "HTTP/1.1",
 					"cookies": [],
-					"headers": [],
+					"headers": [
+						{
+							"name": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "3697"
+						},
+						{
+							"name": "ETag",
+							"value": "W/\"e71-sk1QVNWTBFFnjcZhplKYY4j/PAg\""
+						},
+						{
+							"name": "Date",
+							"value": "Sun, 14 Sep 2025 00:46:52 GMT"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
 					"content": {
-						"size": 0,
-						"mimeType": ""
+						"size": 3697,
+						"mimeType": "application/json; charset=utf-8",
+						"text": "{\"resposta\":\"Ótima pergunta. Vamos entender, de forma simples, como funcionam as conexões de um circuito elétrico.\\n\\nO que é uma conexão em circuito\\n- É o caminho condutor que liga os componentes e a fonte de energia. Sem uma conexão fechada, o circuito não permite o fluxo de corrente (é um circuito aberto).\\n- Um circuito precisa de: fonte de energia (bateria/pilha), condutores (cabos), e componentes (resistores, LEDs, interruptores, etc.).\\n\\nComo a corrente funciona\\n- A fonte de energia cria uma diferença de potencial (tensão) entre dois pontos.\\n- Quando há um caminho fechado (um laço), a corrente flui do polo positivo ao negativo da fonte, passando pelos componentes.\\n- A resistência dos componentes determina quanta corrente vai fluir: quanto maior a resistência, menor a corrente, e vice-versa (Lei de Ohm: I = V / R).\\n\\nConexões comuns: em série e em paralelo\\n- Série:\\n  - O mesmo valor de corrente I passa por todos os elementos.\\n  - As tensões se somam: V_total = V1 + V2 + V3 ...\\n  - A resistência total é a soma: R_total = R1 + R2 + R3 ...\\n  - Exemplo rápido: se V = 9 V e há dois resistores de 1 kΩ em série, R_total = 2 kΩ, então I = 9 V / 2 kΩ = 4,5 mA. Cada resistor dissipa 4,5 V.\\n- Paralelo:\\n  - A mesma tensão V é aplicada a cada ramo.\\n  - A corrente total é a soma das correntes de cada ramo: I_total = I1 + I2 + I3 ...\\n  - A resistência total é menor que qualquer resistência individual: 1/R_total = 1/R1 + 1/R2 + 1/R3 ...\\n  - Exemplo rápido: se V = 9 V e há dois resistores de 1 kΩ em paralelo, R_total = 500 Ω, então I_total = 9 V / 500 Ω = 18 mA (cada resistor puxa 9 mA).\\n\\nComo analisar um circuito de forma prática\\n1) Identifique a fonte de energia, os componentes e como eles estão conectados (em série, paralelo ou ambos).\\n2) Se for apenas série, some as resistências para obter R_total e use I = V / R_total.\\n3) Se for apenas paralelo, calcule a resistência equivalente com 1/R_total = Σ(1/Ri) e use I_total = V / R_total.\\n4) Em circuitos mistos (combinação), reduza etapas: substitua grupos em série, depois grupos em paralelo, até ficar apenas com um resistor equivalente.\\n5) Verifique tensões: em série, a tensão se divide entre os componentes; em paralelo, cada um recebe a tensão total.\\n6) Use leis básicas para checar: Ohm (I = V/R) e, se quiser, leis de Kirchhoff (conservação de corrente em nós e de tensão em malhas).\\n\\nDicas úteis para praticar\\n- Construa na prática com uma placa de ensaio (breadboard) e uma fonte de baixa tensão.\\n- Use multímetro para medir tensão (V), corrente (A) e resistência (Ω).\\n- Comece com circuitos simples (um motor/LED com resistor) e evolua para combinações em série/paralelo.\\n- Reserve sempre o cuidado: desligue a fonte ao montar/modificar, evite curtos-circuitos, e não manuseie circuitos com alimentação ativa se não tiver experiência.\\n\\nExercício rápido para entender\\n- Caso A: uma pilha de 9 V alimenta um resistor de 1 kΩ em série. Qual é a corrente?\\n  Resposta: I = 9 V / 1000 Ω = 9 mA.\\n- Caso B: os mesmos 9 V alimentam dois resistores de 1 kΩ em paralelo. Qual é a corrente total?\\n  Resposta: R_total = 500 Ω, I_total = 9 V / 500 Ω = 18 mA. Cada resistor puxa 9 V/1 kΩ = 9 mA.\\n- Caso C: os dois resistores de 1 kΩ estão em série com um terceiro resistor de 1 kΩ. Qual é a corrente?\\n  R_total = 3 kΩ, I = 9 V / 3 kΩ = 3 mA. A tensão em cada resistor é 3 V.\\n\\nSe quiser, eu posso adaptar esse conteúdo para um nível específico (fundamental, ensino médio, faculdade) ou criar exercícios passo a passo com diagramas simples. Quer um exemplo com LED e resistor para ilustrar?\"}"
 					},
 					"redirectURL": "",
 					"headersSize": -1,
@@ -843,7 +1309,7 @@
 					"dns": -1,
 					"connect": -1,
 					"send": 0,
-					"wait": 0,
+					"wait": 14168.599,
 					"receive": 0,
 					"ssl": -1
 				},
