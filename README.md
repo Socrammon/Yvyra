@@ -3,8 +3,8 @@
 # Escola: ETEC Dr. Geraldo José Rodrigues Alckmin
 -----------------------------------------------------------------------------------------------------------------------------------
 # Equipe:
-Marcos Vinicius Alcides da Costa
-Luan Kaue dos Santos Queiroz
+Marcos Vinicius Alcides da Costa, 
+Luan Kaue dos Santos Queiroz, 
 Mykael Guedes Correia Mota
 -----------------------------------------------------------------------------------------------------------------------------------
 # Descrição do projeto:
