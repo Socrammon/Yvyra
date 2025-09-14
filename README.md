@@ -26,7 +26,7 @@ openai: v5.20.1
 sequelize: v6.37.7  
 nodemon: v3.1.10  
 jsonwebtoken v9.0.2
-bcrypt v6.0.0
+bcrypt 6.0.0
 
 
 API externa: Groq
