@@ -57,6 +57,7 @@ async function InicializarServidor() {
 
         app.listen(porta, () => {
             console.log(`\nServidor rodando em http://${host}:${porta}`);
+            console.log(`\nSwagger rodando em http://${host}:${porta}/api-docs`);
         });
 
     } catch (erro) {
