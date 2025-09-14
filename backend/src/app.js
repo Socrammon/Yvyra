@@ -3,6 +3,10 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
+import dotenv from "dotenv";
+import authRoutes from "./routes/authRoutes.js";
+dotenv.config();
+
 //Inicializador do Banco de dados
 import { inicializarBanco } from './config/database.js';
 
@@ -26,6 +30,7 @@ const app = express(); //Cria o app express
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
+app.use("/api", authRoutes);
 
 //Rotas perguntar
 app.use('/perguntar/simples', perguntarSimples);

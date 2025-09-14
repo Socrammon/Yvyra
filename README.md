@@ -176,3 +176,6 @@ O arquivo gerado para imagem é salvo na pasta uploads
 # Documentação APIs - Swagger
 Para acessar a documentação das APIs pelo swagger, deve se inicializar o servidor com npm run start ou npm run dev
 e acessar a url: "http://localhost:3000/api-docs/"
+-----------------------------------------------------------------------------------------------------------------------------------
+# Importante
+Na rota de perguntar simulação e perguntar imagem, a IA irá gerar dois tipos de código diferentes, no da imagem, o código automaticamente será tranformado em imagem, pelo MiKTeX, e sera salvo na pasta uploads como "circuito.png". Já o código da simulação serve para ser posto no site "Falstad", na parte de importação, assim o circuito será renderizado para simulação. Infelizmente não tivemos tempo e nem experiência para não depender desses programas, mas a ideia principal do projeto era de que pudessemos nós mesmos fazer tanto a IA, quanto um programa que gera a imagem do circuito e um programa que simula o circuito. Por fim, nossos agradecimentos pela a oportunidade de participar desse evento!

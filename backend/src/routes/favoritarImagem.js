@@ -42,6 +42,13 @@ rotasFavoritosImagem.post('/imagem', async (req, res) => {
         return;
     }
 
+    if (!favoritoImagem?.caminho) {
+        res.send({
+            erro: { mensagem: 'O atributo caminho é obrigatório para favoritar a imagem' }
+        });
+        return;
+    }
+
     try {
         const resposta = await registrarFavoritoImagem(favoritoImagem);
 
@@ -49,7 +56,7 @@ rotasFavoritosImagem.post('/imagem', async (req, res) => {
         res.send({
             mensagem: `Imagem ${favoritoImagem.titulo} favoritada com sucesso`,
             titulo: `${favoritoImagem.titulo}`,
-            caminho: resposta.caminho
+            caminho: `${favoritoImagem.caminho}`
         });
 
     } catch (erro) {

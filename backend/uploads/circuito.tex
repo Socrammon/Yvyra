@@ -1,13 +1,21 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}
+  \draw
+    (0,0) to[battery] (0,2)
+    to[led] (2,2)
+    -- (2,0)
+    -- (0,0);
+\end{circuitikz}
+\end{document}
 
-      \documentclass{standalone}
-      \usepackage{circuitikz}
-      \begin{document}
-      \begin{circuitikz}
-        \draw
-          (0,0) to[battery] (0,2)
-          to[resistor] (2,2)
-          to[led] (2,0)
-          -- (0,0);
-      \end{circuitikz}
-      \end{document}
-    
+Explicação rápida:
+
+(x,y) → coordenadas.
+
+to[battery] → bateria.
+
+to[led] → LED.
+
+-- → fio comum.
